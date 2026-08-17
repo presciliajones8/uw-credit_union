@@ -10,7 +10,7 @@ $user = [
     'id' => 0,
     'fullName' => 'Guest Customer',
     'balance' => '0.00',
-    'idDocument' => 'images/arffib.png',
+    'idDocument' => 'images/uw.png',
     'profileImage' => '',
     'email' => '',
     'accountType' => 'Savings',
@@ -37,10 +37,10 @@ if ($user_id !== null) {
 
 // Helper function to get profile image path
 function get_profile_image($user) {
-    if (!empty($user['profileImage']) && $user['profileImage'] !== 'images/arffib.png') {
+    if (!empty($user['profileImage']) && $user['profileImage'] !== 'images/uw.png') {
         return $user['profileImage'];
     }
-    return $user['idDocument'] ?? 'images/arffib.png';
+    return $user['idDocument'] ?? 'images/uw.png';
 }
 
 // Handle profile image upload
@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['photo'])) {
                             $user['profileImage'] = $profileImagePath;
                             
                             // Delete old image if it exists and is not the default
-                            if ($oldProfileImage && $oldProfileImage !== 'images/arffib.png' && file_exists(__DIR__ . '/' . $oldProfileImage)) {
+                            if ($oldProfileImage && $oldProfileImage !== 'images/uw.png' && file_exists(__DIR__ . '/' . $oldProfileImage)) {
                                 unlink(__DIR__ . '/' . $oldProfileImage);
                             }
                         } else {
@@ -177,7 +177,7 @@ $conn->close();
     <meta name="csrf-token" content="ABlWjPuCVkEUw9HryA5Ucz0YGMVMlntSND6WRpuH">
     <title>UW CREDIT UNION | Profile</title>
     <meta name="description" content="Swift and Secure Money Transfer to any UK bank account will become a breeze with UW CREDIT UNION." />
-    <link rel="shortcut icon" href="images/arffib.png" />
+    <link rel="shortcut icon" href="images/uw.png" />
     <link rel="preload" href="path/to/GraphikRegular.otf" as="font" type="font/otf" crossorigin="anonymous">
 
 
@@ -421,7 +421,7 @@ $conn->close();
         }
     </style>
     <!-- Web Application Manifest -->
-<link rel="manifest" href="images/arffib.png">
+<link rel="manifest" href="images/uw.png">
 <!-- Chrome for Android theme color -->
 <meta name="theme-color" content="#000000">
 
@@ -626,7 +626,7 @@ $conn->close();
                             <i data-lucide="menu" class="h-6 w-6"></i>
                         </button>
                         <a href="/" class="ml-4">
-                            <img src="images/arffib.png"
+                            <img src="images/uw.png"
                                 alt="Logo" class="h-8 w-auto">
                         </a>
                     </div>
@@ -1507,7 +1507,7 @@ $conn->close();
             <footer class="bg-white border-t border-gray-200 hidden md:block">
                 <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 md:flex md:items-center md:justify-between">
                     <div class="flex items-center">
-                        <img src="images/arffib.png" alt="Logo" class="h-6 w-auto mr-2">
+                        <img src="images/uw.png" alt="Logo" class="h-6 w-auto mr-2">
                         <p class="text-sm text-gray-500">© 2025 UW CREDIT UNION. All rights reserved.</p>
                     </div>
                     <div class="flex space-x-6 mt-4 md:mt-0">
