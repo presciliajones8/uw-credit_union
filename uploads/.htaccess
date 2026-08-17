@@ -1,0 +1,16 @@
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.php5$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.phtml$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+Options -ExecCGI

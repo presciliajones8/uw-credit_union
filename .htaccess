@@ -1,0 +1,13 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# These substitutions are deliberately relative to this directory.  A leading
+# slash would send requests to XAMPP's document root instead of /TML.
+RewriteRule ^$ index.php [L]
+RewriteRule ^login/?$ login.php [L]
+RewriteRule ^register/?$ register.php [L]
+RewriteRule ^logout/?$ logout.php [L]
+RewriteRule ^transactions/?$ transactions.php [L]
+RewriteRule ^deposit/?$ deposit.php [L]
+RewriteRule ^transfer-access/?$ transfer-access.php [L]

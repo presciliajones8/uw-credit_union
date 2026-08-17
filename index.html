@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>UW CREDIT UNION | Modern Banking & Personal Finance</title>
+   <meta
+     name="description"
+     content="UW CREDIT UNION helps people and businesses manage everyday banking with secure digital tools, flexible accounts, and straightforward financial services."
+   />
+   <meta name="theme-color" content="#0f172a" />
+   <meta property="og:title" content="UW CREDIT UNION | Modern Banking & Personal Finance" />
+   <meta
+     property="og:description"
+     content="Secure everyday banking, savings, digital account management, and business financial services designed for clarity and peace of mind."
+   />
+   <meta property="og:type" content="website" />
+   <meta property="og:image" content="images/arffib.png" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="UW CREDIT UNION | Modern Banking & Personal Finance" />
+   <meta
+     name="twitter:description"
+     content="Modern and secure banking for personal and business customers."
+   />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+     rel="stylesheet"
+   />
+   <style>
+     :root {
+       --primary: #0f172a;
+       --primary-dark: #0b1220;
+       --primary-soft: #eff6ff;
+       --secondary: #1d4ed8;
+       --secondary-soft: #dbeafe;
+       --accent: #22c55e;
+       --accent-soft: #dcfce7;
+       --surface: #ffffff;
+       --surface-alt: #f8fafc;
+       --surface-muted: #f1f5f9;
+       --text: #111827;
+       --muted: #475569;
+       --border: #e2e8f0;
+       --success: #166534;
+       --warning: #9a6700;
+       --error: #b91c1c;
+       --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+       --shadow-md: 0 18px 42px rgba(15, 23, 42, 0.12);
+       --radius-sm: 12px;
+       --radius-md: 18px;
+       --radius-lg: 28px;
+       --container: 1200px;
+     }
+
+     * { box-sizing: border-box; }
+     html { scroll-behavior: smooth; }
+     body {
+       margin: 0;
+       font-family: "Inter", "Segoe UI", sans-serif;
+       background: #f8fafc;
+       color: var(--text);
+       line-height: 1.6;
+     }
+
+     img { max-width: 100%; display: block; }
+     a { text-decoration: none; color: inherit; }
+     button, input, select, textarea { font: inherit; }
+     ul { list-style: none; padding: 0; margin: 0; }
+
+     .container {
+       width: min(var(--container), calc(100% - 32px));
+       margin: 0 auto;
+     }
+
+     .section {
+       padding: 96px 0;
+     }
+
+     .section-header {
+       max-width: 700px;
+       margin-bottom: 40px;
+     }
+     .eyebrow {
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       padding: 8px 12px;
+       border-radius: 999px;
+       font-size: 12px;
+       font-weight: 700;
+       letter-spacing: 0.08em;
+       text-transform: uppercase;
+       background: var(--primary-soft);
+       color: var(--secondary);
+     }
+     .eyebrow::before {
+     
+     }
+
+     h1, h2, h3, h4 {
+       margin: 0;
+       line-height: 1.1;
+       letter-spacing: -0.04em;
+       color: var(--primary);
+     }
+     h1 { font-size: clamp(2.9rem, 5vw, 5rem); }
+     h2 { font-size: clamp(2.1rem, 3vw, 3.2rem); }
+     h3 { font-size: clamp(1.35rem, 2vw, 1.8rem); }
+     p { margin: 0; color: var(--muted); }
+
+     .btn {
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       gap: 10px;
+       min-height: 52px;
+       padding: 0 22px;
+       border-radius: 14px;
+       font-weight: 600;
+       transition: all 0.2s ease;
+       border: 1px solid transparent;
+       cursor: pointer;
+     }
+     .btn-primary {
+       background: var(--primary);
+       color: #fff;
+       box-shadow: var(--shadow-sm);
+     }
+     .btn-primary:hover { background: var(--primary-dark); }
+     .btn-secondary {
+       background: #fff;
+       color: var(--primary);
+       border-color: var(--border);
+     }
+     .btn-secondary:hover {
+       background: var(--surface-alt);
+     }
+     .btn-ghost {
+       background: transparent;
+       color: var(--text);
+       border-color: var(--border);
+     }
+     .btn-ghost:hover { background: var(--surface-alt); }
+
+     .site-header {
+       position: sticky;
+       top: 0;
+       z-index: 40;
+       background: rgba(255,255,255,0.9);
+       backdrop-filter: blur(12px);
+       border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+     }
+     .header-inner {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       min-height: 82px;
+       gap: 20px;
+     }
+     .brand {
+       display: inline-flex;
+       align-items: center;
+       gap: 12px;
+       font-weight: 700;
+       color: var(--primary);
+     }
+     .brand-mark {
+       width: 42px; 
+       height: 42px;
+       border-radius: 12px;
+       display: grid;
+       place-items: center;
+       background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+       color: white;
+       font-size: 17px;
+       font-weight: 700;
+     }
+     .brand-copy {
+       display: flex;
+       flex-direction: column;
+       line-height: 1.1;
+     }
+     .brand-copy strong { letter-spacing: -0.05em; }
+     .brand-copy span {
+       font-size: 10px;
+       color: var(--muted);
+       text-transform: uppercase;
+       letter-spacing: 0.12em;
+     }
+
+     .nav {
+       display: flex;
+       align-items: center;
+       gap: 26px;
+       color: var(--muted);
+       font-size: 0.96rem;
+     }
+     .nav a {
+       position: relative;
+       transition: color 0.2s ease;
+     }
+     .nav a:hover { color: var(--primary); }
+     .nav a::after {
+       content: "";
+       position: absolute;
+       left: 0;
+       bottom: -8px;
+       width: 100%;
+       height: 2px;
+       background: var(--secondary);
+       opacity: 0;
+       transform: scaleX(0.7);
+       transition: all 0.2s ease;
+     }
+     .nav a:hover::after { opacity: 1; transform: scaleX(1); }
+
+     .header-actions {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+     }
+     .header-actions .btn {
+       min-height: 44px;
+       padding: 0 18px;
+     }
+     .mobile-menu-toggle {
+       display: none;
+       width: 42px;
+       height: 42px;
+       border: 1px solid var(--border);
+       border-radius: 10px;
+       background: #fff;
+       color: var(--primary);
+     }
+
+     .hero {
+       position: relative;
+       background: linear-gradient(180deg, #f8fafc 0%, #eef6ff 100%);
+       overflow: hidden;
+     }
+     .hero::before {
+       content: "";
+       position: absolute;
+       inset: 0;
+       background: radial-gradient(circle at top right, rgba(29, 78, 216, 0.1), transparent 28%), radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.12), transparent 26%);
+     }
+     .hero-grid {
+       position: relative;
+       display: grid;
+       grid-template-columns: 1.14fr 0.86fr;
+       align-items: center;
+       min-height: 700px;
+       gap: 28px;
+     }
+     .hero-copy {
+       max-width: 620px;
+     }
+     .hero-copy h1 {
+       margin-top: 22px;
+       margin-bottom: 18px;
+     }
+     .hero-copy p {
+       max-width: 560px;
+       font-size: 1.12rem;
+     }
+     .hero-actions {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 14px;
+       margin-top: 30px;
+     }
+     .hero-meta {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 18px;
+       margin-top: 28px;
+     }
+     .meta-item {
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       min-height: 48px;
+       padding: 10px 14px;
+       background: rgba(255,255,255,0.75);
+       border: 1px solid rgba(226,232,240,0.9);
+       border-radius: 12px;
+       color: var(--primary);
+       font-weight: 600;
+     }
+     .meta-dot {
+       width: 10px;
+       height: 10px;
+       border-radius: 50%;
+       background: var(--accent);
+     }
+
+     .hero-visual {
+       position: relative;
+       min-height: 560px;
+       display: grid;
+       place-items: center;
+     }
+     .dashboard-shell {
+       position: relative;
+       width: min(100%, 520px);
+       border-radius: 32px;
+       background: rgba(255,255,255,0.9);
+       border: 1px solid rgba(226, 232, 240, 0.9);
+       box-shadow: var(--shadow-md);
+       padding: 22px 20px 18px;
+     }
+     .glass-card {
+       background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,247,255,0.8));
+       border: 1px solid rgba(255,255,255,0.7);
+       backdrop-filter: blur(8px);
+     }
+     .dashboard-header {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 10px 10px 18px;
+     }
+     .mini-brand {
+       display: flex;
+       align-items: center;
+       gap: 8px;
+       font-weight: 700;
+       color: var(--primary);
+       font-size: 0.9rem;
+     }
+     .status-badge {
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       border-radius: 999px;
+       padding: 7px 10px;
+       background: var(--accent-soft);
+       color: var(--success);
+       font-size: 12px;
+       font-weight: 700;
+     }
+     .status-badge::before {
+       content: "";
+       width: 8px;
+       height: 8px;
+       border-radius: 50%;
+       background: var(--accent);
+     }
+     .account-spotlight {
+       padding: 22px 18px;
+       border-radius: 24px;
+       background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+       color: white;
+     }
+     .account-label {
+       color: rgba(255,255,255,0.74);
+       font-size: 0.82rem;
+       letter-spacing: 0.08em;
+       text-transform: uppercase;
+     }
+     .account-amount {
+       margin-top: 12px;
+       font-size: clamp(2rem, 3.5vw, 2.7rem);
+       font-weight: 700;
+       letter-spacing: -0.05em;
+     }
+     .account-row {
+       display: flex;
+       justify-content: space-between;
+       gap: 12px;
+       margin-top: 18px;
+       color: rgba(255,255,255,0.82);
+       font-size: 0.88rem;
+     }
+
+     .mini-grid {
+       margin-top: 18px;
+       display: grid;
+       grid-template-columns: repeat(2, minmax(0, 1fr));
+       gap: 14px;
+     }
+     .mini-card {
+       padding: 16px 14px;
+       border-radius: 18px;
+       background: var(--surface-alt);
+       border: 1px solid var(--border);
+     }
+     .mini-card strong {
+       display: block;
+       color: var(--primary);
+       font-size: 1.2rem;
+       margin-top: 12px;
+     }
+     .mini-card span {
+       color: var(--muted);
+       font-size: 0.85rem;
+     }
+     .mini-card .icon-box {
+       width: 38px;
+       height: 38px;
+       display: grid;
+       place-items: center;
+       border-radius: 12px;
+       background: var(--secondary-soft);
+       color: var(--secondary);
+     }
+
+     .floating-panel {
+       position: absolute;
+       right: -12px;
+       bottom: 28px;
+       width: min(260px, 46%);
+       padding: 16px 16px 14px;
+       border-radius: 22px;
+       background: rgba(255,255,255,0.8);
+       border: 1px solid rgba(226, 232, 240, 0.9);
+       box-shadow: var(--shadow-sm);
+     }
+     .floating-panel .row {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 12px;
+     }
+     .trend-bars {
+       display: flex;
+       align-items: end;
+       gap: 7px;
+       height: 60px;
+       margin-top: 12px;
+     }
+     .trend-bars span {
+       display: block;
+       flex: 1;
+       border-radius: 999px 999px 4px 4px;
+       background: linear-gradient(180deg, rgba(29,78,216,0.92), rgba(29,78,216,0.38));
+     }
+
+     .trust-bar {
+       padding: 26px 0 0;
+     }
+     .trust-strip {
+       display: grid;
+       grid-template-columns: repeat(6, minmax(0, 1fr));
+       gap: 18px;
+       padding: 22px 18px;
+       border: 1px solid var(--border);
+       border-radius: 22px;
+       background: rgba(255,255,255,0.85);
+       box-shadow: var(--shadow-sm);
+     }
+     .trust-item {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       gap: 10px;
+       color: var(--primary);
+     }
+     .trust-item .icon-wrap {
+       width: 46px;
+       height: 46px;
+       border-radius: 14px;
+       background: var(--primary-soft);
+       display: grid;
+       place-items: center;
+       color: var(--secondary);
+     }
+     .trust-item span {
+       font-size: 0.8rem;
+       color: var(--muted);
+       line-height: 1.5;
+       font-weight: 600;
+     }
+
+     .card-grid {
+       display: grid;
+       grid-template-columns: repeat(4, minmax(0, 1fr));
+       gap: 22px;
+     }
+     .feature-card {
+       display: flex;
+       flex-direction: column;
+       gap: 18px;
+       padding: 24px 22px 20px;
+       border-radius: 22px;
+       background: var(--surface);
+       border: 1px solid var(--border);
+       box-shadow: var(--shadow-sm);
+       transition: transform 0.25s ease, box-shadow 0.25s ease;
+     }
+     .feature-card:hover {
+       transform: translateY(-4px);
+       box-shadow: var(--shadow-md);
+     }
+     .card-icon {
+       width: 52px;
+       height: 52px;
+       display: grid;
+       place-items: center;
+       border-radius: 16px;
+       background: var(--primary-soft);
+       color: var(--secondary);
+       font-weight: 700;
+     }
+     .feature-card h3 { font-size: 1.25rem; }
+     .feature-card p { margin-top: 8px; }
+     .card-link {
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       margin-top: auto;
+       color: var(--secondary);
+       font-weight: 600;
+     }
+
+     .stacked-section {
+       background: var(--surface);
+     }
+     .products-grid {
+       display: grid;
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+       gap: 22px;
+     }
+     .product-card {
+       display: flex;
+       flex-direction: column;
+       gap: 18px;
+       padding: 24px 22px;
+       border: 1px solid var(--border);
+       border-radius: 22px;
+       background: linear-gradient(180deg, #fff, #f8fafc);
+       box-shadow: var(--shadow-sm);
+     }
+     .product-meta {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 12px;
+     }
+     .pill {
+       padding: 7px 10px;
+       border-radius: 999px;
+       font-size: 11px;
+       font-weight: 700;
+       letter-spacing: 0.08em;
+       text-transform: uppercase;
+       background: var(--primary-soft);
+       color: var(--secondary);
+     }
+     .product-card p { margin-top: 6px; }
+
+     .experience-wrap {
+       display: grid;
+       grid-template-columns: 1fr 1.04fr;
+       gap: 26px;
+       align-items: center;
+     }
+     .experience-copy {
+       padding-right: 8px;
+     }
+     .experience-list {
+       display: grid;
+       gap: 16px;
+       margin-top: 26px;
+     }
+     .experience-item {
+       display: flex;
+       gap: 14px;
+       align-items: flex-start;
+       padding: 18px 18px;
+       border: 1px solid var(--border);
+       border-radius: 18px;
+       background: var(--surface);
+       box-shadow: var(--shadow-sm);
+     }
+     .experience-item .circle {
+       width: 36px;
+       height: 36px;
+       border-radius: 50%;
+       display: grid;
+       place-items: center;
+       background: var(--secondary-soft);
+       color: var(--secondary);
+       font-weight: 700;
+     }
+     .experience-demo {
+       background: linear-gradient(180deg, #ffffff, #f8fafc);
+       border: 1px solid var(--border);
+       border-radius: 28px;
+       box-shadow: var(--shadow-md);
+       padding: 18px;
+     }
+     .demo-topbar {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding-bottom: 16px;
+       border-bottom: 1px solid var(--border);
+     }
+     .demo-dot {
+       width: 10px;
+       height: 10px;
+       border-radius: 50%;
+       background: #d1d5db;
+     }
+     .demo-dots {
+       display: flex;
+       gap: 7px;
+     }
+     .balance-panel {
+       margin-top: 18px;
+       padding: 20px;
+       border-radius: 20px;
+       background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+       color: white;
+     }
+     .balance-panel .label { color: rgba(255,255,255,0.7); }
+     .balance-panel .value {
+       font-size: clamp(1.8rem, 3vw, 2.5rem);
+       font-weight: 700;
+       letter-spacing: -0.05em;
+       margin-top: 10px;
+     }
+     .demo-grid {
+       display: grid;
+       grid-template-columns: repeat(2, minmax(0, 1fr));
+       gap: 16px;
+       margin-top: 18px;
+     }
+     .demo-stat {
+       padding: 18px 16px;
+       border: 1px solid var(--border);
+       border-radius: 16px;
+       background: #fff;
+     }
+     .stat-label { color: var(--muted); font-size: 0.8rem; }
+     .stat-value { display: block; margin-top: 8px; color: var(--primary); font-size: 1.2rem; font-weight: 700; }
+     .chart-box {
+       margin-top: 18px;
+       padding: 18px 16px;
+       border: 1px solid var(--border);
+       border-radius: 18px;
+       background: linear-gradient(180deg, #fff, #f8fafc);
+     }
+     .line-chart {
+       margin-top: 12px;
+       height: 90px;
+       display: flex;
+       align-items: end;
+       gap: 8px;
+     }
+     .line-chart span {
+       display: block;
+       flex: 1;
+       border-radius: 999px 999px 0 0;
+       background: linear-gradient(180deg, rgba(29,78,216,0.8), rgba(29,78,216,0.22));
+     }
+
+     .management-grid {
+       display: grid;
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+       gap: 22px;
+     }
+     .insight-panel {
+       padding: 22px;
+       border: 1px solid var(--border);
+       border-radius: 22px;
+       background: var(--surface);
+       box-shadow: var(--shadow-sm);
+     }
+     .insight-panel h3 { font-size: 1.15rem; }
+     .progress-wrap {
+       margin-top: 18px;
+     }
+     .progress-head {
+       display: flex;
+       justify-content: space-between;
+       margin-bottom: 10px;
+     }
+     .progress-track {
+       width: 100%;
+       height: 10px;
+       border-radius: 999px;
+       background: #e2e8f0;
+       overflow: hidden;
+     }
+     .progress-bar {
+       height: 100%;
+       border-radius: inherit;
+       background: linear-gradient(90deg, #1d4ed8 0%, #0f172a 100%);
+     }
+     .tiny-list {
+       display: grid;
+       gap: 14px;
+       margin-top: 18px;
+     }
+     .tiny-list li {
+       display: flex;
+       justify-content: space-between;
+       padding: 12px 14px;
+       border-radius: 12px;
+       background: var(--surface-alt);
+       border: 1px solid var(--border);
+     }
+
+     .business-layout {
+       display: grid;
+       grid-template-columns: 1fr 0.96fr;
+       gap: 26px;
+       align-items: center;
+     }
+     .business-visual {
+       padding: 24px;
+       background: linear-gradient(180deg, #ffffff, #f8fafc);
+       border: 1px solid var(--border);
+       border-radius: 26px;
+       box-shadow: var(--shadow-md);
+     }
+     .business-stat-box {
+       padding: 18px 18px;
+       border: 1px solid var(--border);
+       border-radius: 18px;
+       background: var(--surface);
+     }
+     .business-figure {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: 12px;
+     }
+     .business-figure strong {
+       font-size: clamp(1.7rem, 2.4vw, 2.3rem);
+       color: var(--primary);
+       letter-spacing: -0.05em;
+     }
+     .business-figure .tag {
+       background: var(--accent-soft);
+       color: var(--success);
+       padding: 6px 10px;
+       border-radius: 999px;
+       font-size: 12px;
+       font-weight: 700;
+     }
+
+     .benefits-grid {
+       display: grid;
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+       gap: 22px;
+     }
+     .benefit-box {
+       padding: 24px 20px;
+       border-radius: 20px;
+       background: var(--surface);
+       border: 1px solid var(--border);
+       box-shadow: var(--shadow-sm);
+     }
+     .benefit-icon {
+       width: 46px;
+       height: 46px;
+       border-radius: 14px;
+       background: var(--primary-soft);
+       display: grid;
+       place-items: center;
+       color: var(--secondary);
+       margin-bottom: 18px;
+     }
+
+     .steps {
+       display: grid;
+       grid-template-columns: repeat(4, minmax(0, 1fr));
+       gap: 18px;
+     }
+     .step {
+       position: relative;
+       padding: 26px 20px 20px;
+       border: 1px solid var(--border);
+       border-radius: 20px;
+       background: var(--surface);
+     }
+     .step-number {
+       display: inline-grid;
+       place-items: center;
+       width: 42px;
+       height: 42px;
+       border-radius: 12px;
+       background: var(--primary);
+       color: #fff;
+       font-weight: 700;
+       margin-bottom: 18px;
+     }
+     .step p { margin-top: 8px; }
+
+     .resources-grid {
+       display: grid;
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+       gap: 22px;
+     }
+     .resource-card {
+       display: flex;
+       flex-direction: column;
+       gap: 16px;
+       background: var(--surface);
+       border: 1px solid var(--border);
+       border-radius: 22px;
+       box-shadow: var(--shadow-sm);
+       overflow: hidden;
+     }
+     .resource-card .thumb {
+       height: 190px;
+       background: linear-gradient(135deg, rgba(15,23,42,0.94), rgba(29,78,216,0.72));
+       position: relative;
+     }
+     .resource-card .thumb::after {
+       content: "";
+       position: absolute;
+       inset: 18px;
+       border: 1px solid rgba(255,255,255,0.25);
+       border-radius: 20px;
+       background: rgba(255,255,255,0.06);
+     }
+     .resource-card .content {
+       padding: 0 20px 22px;
+     }
+     .tagline {
+       display: inline-block;
+       margin-bottom: 10px;
+       color: var(--secondary);
+       font-weight: 700;
+       font-size: 12px;
+       letter-spacing: 0.08em;
+       text-transform: uppercase;
+     }
+     .resource-card a {
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       margin-top: 16px;
+       color: var(--primary);
+       font-weight: 600;
+     }
+
+     .faq-wrap {
+       display: grid;
+       grid-template-columns: 0.9fr 1.1fr;
+       gap: 26px;
+       align-items: start;
+     }
+     .faq-list {
+       background: var(--surface);
+       border: 1px solid var(--border);
+       border-radius: 22px;
+       overflow: hidden;
+       box-shadow: var(--shadow-sm);
+     }
+     .faq-item {
+       border-bottom: 1px solid var(--border);
+     }
+     .faq-item:last-child { border-bottom: 0; }
+     .faq-question {
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 16px;
+       padding: 20px 22px;
+       background: transparent;
+       border: 0;
+       text-align: left;
+       color: var(--primary);
+       font-weight: 600;
+       cursor: pointer;
+     }
+     .faq-question span:last-child {
+       font-size: 1.4rem;
+       color: var(--secondary);
+     }
+     .faq-answer {
+       max-height: 0;
+       overflow: hidden;
+       transition: max-height 0.25s ease;
+     }
+     .faq-answer p {
+       padding: 0 22px 20px;
+     }
+     .faq-item.open .faq-answer { max-height: 200px; }
+     .faq-item.open .faq-question span:last-child { transform: rotate(45deg); }
+
+     .security-panel {
+       display: grid;
+       grid-template-columns: repeat(3, minmax(0,1fr));
+       gap: 22px;
+       margin-top: 28px;
+     }
+     .security-box {
+       padding: 22px 20px;
+       border: 1px solid var(--border);
+       border-radius: 20px;
+       background: var(--surface);
+       box-shadow: var(--shadow-sm);
+     }
+     .security-icon {
+       width: 46px;
+       height: 46px;
+       display: grid;
+       place-items: center;
+       border-radius: 14px;
+       background: var(--accent-soft);
+       color: var(--success);
+       margin-bottom: 16px;
+     }
+
+     .contact-panel {
+       display: grid;
+       grid-template-columns: 1fr 0.96fr;
+       gap: 26px;
+       align-items: center;
+     }
+     .contact-box {
+       padding: 28px 24px;
+       background: linear-gradient(180deg, #ffffff, #f8fafc);
+       border: 1px solid var(--border);
+       border-radius: 24px;
+       box-shadow: var(--shadow-sm);
+     }
+     .contact-grid {
+       display: grid;
+       grid-template-columns: repeat(2, minmax(0, 1fr));
+       gap: 18px;
+       margin-top: 22px;
+     }
+     .contact-item {
+       padding: 18px;
+       border-radius: 18px;
+       background: var(--surface);
+       border: 1px solid var(--border);
+     }
+     .contact-item h4 {
+       font-size: 1rem;
+       margin-bottom: 8px;
+     }
+     .cta-panel {
+       padding: 44px 34px;
+       border-radius: 28px;
+       background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 20px;
+     }
+     .cta-panel h2 { color: white; }
+     .cta-panel p { color: rgba(255,255,255,0.76); }
+     .cta-actions {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 12px;
+     }
+     .cta-panel .btn-secondary {
+       background: rgba(255,255,255,0.1);
+       border-color: rgba(255,255,255,0.2);
+       color: white;
+     }
+     .cta-panel .btn-secondary:hover {
+       background: rgba(255,255,255,0.15);
+     }
+
+     .site-footer {
+       background: var(--primary-dark);
+       color: rgba(255,255,255,0.79);
+       padding: 60px 0 24px;
+     }
+     .footer-grid {
+       display: grid;
+       grid-template-columns: 1.2fr repeat(4, minmax(0, 1fr));
+       gap: 24px;
+     }
+     .footer-brand {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+       margin-bottom: 18px;
+       color: white;
+     }
+     .footer-brand .brand-mark {
+       background: rgba(255,255,255,0.08);
+     }
+     .footer-col h4 {
+       color: white;
+       font-size: 1rem;
+       margin-bottom: 16px;
+     }
+     .footer-col a {
+       display: block;
+       margin-bottom: 10px;
+       color: rgba(255,255,255,0.7);
+     }
+     .footer-base {
+       margin-top: 28px;
+       padding-top: 20px;
+       border-top: 1px solid rgba(255,255,255,0.12);
+       display: flex;
+       justify-content: space-between;
+       gap: 16px;
+       flex-wrap: wrap;
+     }
+
+     @media (max-width: 1100px) {
+       .nav { display: none; }
+       .header-actions .btn-login { display: none; }
+       .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+       .hero-grid,
+       .experience-wrap,
+       .business-layout,
+       .faq-wrap,
+       .contact-panel,
+       .footer-grid {
+         grid-template-columns: 1fr;
+       }
+       .card-grid,
+       .products-grid,
+       .management-grid,
+       .benefits-grid,
+       .resources-grid,
+       .security-panel,
+       .steps {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+       }
+     }
+
+     @media (max-width: 760px) {
+       .section { padding: 80px 0; }
+       .hero-grid { min-height: auto; padding-top: 24px; }
+       .hero-copy { max-width: 100%; }
+       .trust-strip,
+       .card-grid,
+       .products-grid,
+       .management-grid,
+       .benefits-grid,
+       .resources-grid,
+       .security-panel,
+       .steps,
+       .contact-grid {
+         grid-template-columns: 1fr;
+       }
+       .mini-grid,
+       .demo-grid { grid-template-columns: 1fr; }
+       .cta-panel {
+         flex-direction: column;
+         align-items: start;
+       }
+       .header-inner { min-height: 72px; }
+       .brand-copy span { display: none; }
+     }
+
+     .mobile-nav {
+       display: none;
+       padding: 14px 0 18px;
+       border-top: 1px solid var(--border);
+     }
+     .mobile-nav.open { display: block; }
+     .mobile-nav-list {
+       display: grid;
+       gap: 10px;
+     }
+     .mobile-nav-list a {
+       display: block;
+       padding: 12px 14px;
+       border-radius: 12px;
+       background: var(--surface-alt);
+       color: var(--primary);
+       font-weight: 600;
+     }
+     .mobile-nav-actions {
+       margin-top: 14px;
+       display: flex;
+       gap: 10px;
+     }
+     .sr-only {
+       position: absolute;
+       width: 1px;
+       height: 1px;
+       padding: 0;
+       margin: -1px;
+       overflow: hidden;
+       clip: rect(0, 0, 0, 0);
+       white-space: nowrap;
+       border: 0;
+     }
+   </style>
+</head>
+<body>
+   <header class="site-header">
+     <div class="container header-inner">
+       <a href="#top" class="brand" aria-label="UW CREDIT UNION home">
+         <span class="brand-mark" aria-hidden="true">A</span>
+         <span class="brand-copy">
+           <strong>UW CREDIT UNION</strong>
+           <span>Banking</span>
+         </span>
+       </a>
+
+       <nav class="nav" aria-label="Main navigation">
+         <a href="#personal-banking">Personal Banking</a>
+         <a href="#business-banking">Business Banking</a>
+         <a href="#products">Products</a>
+         <a href="#resources">Resources</a>
+         <a href="#about">About</a>
+         <a href="#contact">Contact</a>
+       </nav>
+
+       <div class="header-actions">
+         <a href="login.php" class="btn btn-ghost btn-login">Login</a>
+         <a href="register.php" class="btn btn-primary">Open an Account</a>
+         <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+         </button>
+       </div>
+     </div>
+     <div class="container mobile-nav" id="mobile-nav">
+       <nav class="mobile-nav-list" aria-label="Mobile navigation">
+         <a href="#personal-banking">Personal Banking</a>
+         <a href="#business-banking">Business Banking</a>
+         <a href="#products">Products</a>
+         <a href="#resources">Resources</a>
+         <a href="#about">About</a>
+         <a href="#contact">Contact</a>
+       </nav>
+       <div class="mobile-nav-actions">
+         <a class="btn btn-ghost" href="login.php">Login</a>
+         <a class="btn btn-primary" href="register.php">Open an Account</a>
+       </div>
+     </div>
+   </header>
+
+   <main id="top">
+     <section class="hero">
+       <div class="container hero-grid">
+         <div class="hero-copy">
+           <h1>Banking built around your financial goals.</h1>
+           <p>
+             UW CREDIT UNION helps you manage everyday spending, build savings, and stay in control of your money with secure digital tools designed for clarity, convenience, and confidence.
+           </p>
+           <div class="hero-actions">
+             <a href="/register" class="btn btn-primary">Open an Account</a>
+             <a href="#products" class="btn btn-secondary">Explore Products</a>
+           </div>
+          
+         </div>
+
+         <div class="hero-visual" aria-label="Banking dashboard preview">
+           <div class="dashboard-shell glass-card">
+             <div class="dashboard-header">
+               <div class="mini-brand">
+                 <span class="brand-mark" style="width:28px;height:28px;border-radius:8px;font-size:12px;">A</span>
+                 UW CREDIT UNION
+               </div>
+             </div>
+
+             <div class="account-spotlight">
+               <div class="account-label">Available balance</div>
+               <div class="account-amount">$24,860.40</div>
+               <div class="account-row">
+                 <span>Checking</span>
+                 <span>Updated today</span>
+               </div>
+             </div>
+
+             <div class="mini-grid">
+               <div class="mini-card">
+                 <div class="icon-box" aria-hidden="true">↗</div>
+                 <span>Savings</span>
+                 <strong>$8,450</strong>
+               </div>
+               <div class="mini-card">
+                 <div class="icon-box" aria-hidden="true">◌</div>
+                 <span>Investments</span>
+                 <strong>$12,200</strong>
+               </div>
+             </div>
+           </div>
+
+           <div class="floating-panel glass-card" aria-label="Savings overview">
+             <div class="row">
+               <strong>Goal progress</strong>
+               <span style="color: var(--success); font-weight:700;">72%</span>
+             </div>
+             <div class="trend-bars" aria-hidden="true">
+               <span style="height: 28%;"></span>
+               <span style="height: 38%;"></span>
+               <span style="height: 52%;"></span>
+               <span style="height: 68%;"></span>
+               <span style="height: 84%;"></span>
+               <span style="height: 100%;"></span>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section class="trust-bar" aria-label="Trust and service highlights">
+       <div class="container">
+         <div class="trust-strip">
+           <div class="trust-item">
+             <div class="icon-wrap" aria-hidden="true">✓</div>
+             <strong>Secure digital banking</strong>
+             <span>Protected access and account monitoring</span>
+           </div>
+           <div class="trust-item">
+             <div class="icon-wrap" aria-hidden="true">🔒</div>
+             <strong>Account protection</strong>
+             <span>Helpful security tools for everyday peace of mind</span>
+           </div>
+           <div class="trust-item">
+             <div class="icon-wrap" aria-hidden="true">☎</div>
+             <strong>Customer support</strong>
+             <span>Simple ways to get assistance when you need it</span>
+           </div>
+           <div class="trust-item">
+             <div class="icon-wrap" aria-hidden="true">◍</div>
+             <strong>Transparent banking</strong>
+             <span>Clear financial information and straightforward access</span>
+           </div>
+           <div class="trust-item">
+             <div class="icon-wrap" aria-hidden="true">⏱</div>
+             <strong>Convenient access</strong>
+             <span>Bank online from your device whenever needed</span>
+           </div>
+           <div class="trust-item">
+             <div class="icon-wrap" aria-hidden="true">◎</div>
+             <strong>Privacy-focused</strong>
+             <span>Responsible handling of personal information</span>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section id="personal-banking" class="section">
+       <div class="container">
+         <div class="section-header">
+           <h2>Everyday banking, simplified.</h2>
+         </div>
+
+         <div class="card-grid">
+           <article class="feature-card">
+             <div class="card-icon" aria-hidden="true">▣</div>
+             <div>
+               <h3>Everyday Banking</h3>
+               <p>Keep your day-to-day finances organized with accounts designed for bills, spending, and cash flow clarity.</p>
+             </div>
+             <a href="#products" class="card-link">Learn more →</a>
+           </article>
+
+           <article class="feature-card">
+             <div class="card-icon" aria-hidden="true">◎</div>
+             <div>
+               <h3>Savings</h3>
+               <p>Build healthy financial habits with goals-based saving tools and flexible account options.</p>
+             </div>
+             <a href="#products" class="card-link">Learn more →</a>
+           </article>
+
+           <article class="feature-card">
+             <div class="card-icon" aria-hidden="true">◍</div>
+             <div>
+               <h3>Digital Banking</h3>
+               <p>Monitor balances, review activity, and manage accounts securely from your phone or desktop.</p>
+             </div>
+             <a href="#digital-experience" class="card-link">Learn more →</a>
+           </article>
+
+           <article class="feature-card">
+             <div class="card-icon" aria-hidden="true">⇄</div>
+             <div>
+               <h3>Payments & Transfers</h3>
+               <p>Move money with confidence through a clear and straightforward transfer experience.</p>
+             </div>
+             <a href="#products" class="card-link">Learn more →</a>
+           </article>
+         </div>
+       </div>
+     </section>
+
+     <section id="products" class="section stacked-section">
+       <div class="container">
+         <div class="section-header">
+           <span class="eyebrow">Financial products</span>
+           <h2>Products designed for how you live and work.</h2>
+         </div>
+
+         <div class="products-grid">
+           <article class="product-card">
+             <div class="product-meta">
+               <h3>Current Accounts</h3>
+               <span class="pill">Daily</span>
+             </div>
+             <p>Efficient everyday account management with secure access, clear visibility, and simple account controls.</p>
+           </article>
+
+           <article class="product-card">
+             <div class="product-meta">
+               <h3>Savings Accounts</h3>
+               <span class="pill">Future</span>
+             </div>
+             <p>Support your long-term goals with practical savings tools that help you plan, monitor, and grow.</p>
+           </article>
+
+           <article class="product-card">
+             <div class="product-meta">
+               <h3>Loans</h3>
+               <span class="pill">Flexible</span>
+             </div>
+             <p>Borrow with confidence using financial products built for transparency, planning, and repayment clarity.</p>
+           </article>
+
+           <article class="product-card">
+             <div class="product-meta">
+               <h3>Investments</h3>
+               <span class="pill">Growth</span>
+             </div>
+             <p>Track your financial progress with clear spending, savings, and investment visibility from one place.</p>
+           </article>
+
+           <article class="product-card">
+             <div class="product-meta">
+               <h3>Cards</h3>
+               <span class="pill">Daily use</span>
+             </div>
+             <p>Access familiar payment tools that integrate with your account activity and spending habits.</p>
+           </article>
+
+           <article class="product-card">
+             <div class="product-meta">
+               <h3>Business Banking</h3>
+               <span class="pill">Business</span>
+             </div>
+             <p>Cash flow visibility, account management, and digital tools for businesses looking to simplify finance.</p>
+           </article>
+         </div>
+       </div>
+     </section>
+
+     <section id="digital-experience" class="section">
+       <div class="container experience-wrap">
+         <div class="experience-copy">
+           <span class="eyebrow">Digital banking experience</span>
+           <h2>Manage your banking in one place.</h2>
+           <div class="experience-list">
+             <div class="experience-item">
+               <div class="circle" aria-hidden="true">1</div>
+               <div>
+                 <h3>Account visibility</h3>
+                 <p>See balances, recent activity, and account health in a clean, readable overview.</p>
+               </div>
+             </div>
+             <div class="experience-item">
+               <div class="circle" aria-hidden="true">2</div>
+               <div>
+                 <h3>Transfer controls</h3>
+                 <p>Review payment details, track transaction activity, and stay informed while moving money.</p>
+               </div>
+             </div>
+             <div class="experience-item">
+               <div class="circle" aria-hidden="true">3</div>
+               <div>
+                 <h3>Goal-based finance</h3>
+                 <p>Monitor savings progress and align account movements with your everyday priorities.</p>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <div class="experience-demo" aria-label="Dashboard preview panel">
+           <div class="demo-topbar">
+             <div class="mini-brand">
+               <span class="brand-mark" style="width:28px;height:28px;border-radius:8px;font-size:12px;">A</span>
+               Dashboard
+             </div>
+             <div class="demo-dots" aria-hidden="true">
+               <span class="demo-dot"></span>
+               <span class="demo-dot"></span>
+               <span class="demo-dot"></span>
+             </div>
+           </div>
+
+           <div class="balance-panel">
+             <div class="label">Available balance</div>
+             <div class="value">$24,860.40</div>
+           </div>
+
+           <div class="demo-grid">
+             <div class="demo-stat">
+               <span class="stat-label">Savings</span>
+               <span class="stat-value">$8,450</span>
+             </div>
+             <div class="demo-stat">
+               <span class="stat-label">Expenses</span>
+               <span class="stat-value">$2,140</span>
+             </div>
+           </div>
+
+           <div class="chart-box">
+             <div class="progress-head">
+               <strong>Monthly overview</strong>
+               <span style="color: var(--success); font-weight:700;">+12.4%</span>
+             </div>
+             <div class="line-chart" aria-hidden="true">
+               <span style="height: 30%;"></span>
+               <span style="height: 42%;"></span>
+               <span style="height: 35%;"></span>
+               <span style="height: 60%;"></span>
+               <span style="height: 58%;"></span>
+               <span style="height: 76%;"></span>
+               <span style="height: 88%;"></span>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section class="section" aria-labelledby="financial-management">
+       <div class="container">
+         <div class="section-header">
+           <span class="eyebrow">Financial management</span>
+           <h2 id="financial-management">Understand your money with meaningful insights.</h2>
+         </div>
+
+         <div class="management-grid">
+           <article class="insight-panel">
+             <h3>Spending insights</h3>
+             <div class="progress-wrap">
+               <div class="progress-head">
+                 <span>Housing</span>
+                 <strong>42%</strong>
+               </div>
+               <div class="progress-track"><div class="progress-bar" style="width:42%;"></div></div>
+             </div>
+             <div class="tiny-list">
+               <li><span>Groceries</span><strong>$480</strong></li>
+               <li><span>Transport</span><strong>$260</strong></li>
+             </div>
+           </article>
+
+           <article class="insight-panel">
+             <h3>Savings progress</h3>
+             <div class="progress-wrap">
+               <div class="progress-head">
+                 <span>Emergency fund</span>
+                 <strong>72%</strong>
+               </div>
+               <div class="progress-track"><div class="progress-bar" style="width:72%;"></div></div>
+             </div>
+             <div class="tiny-list">
+               <li><span>Target</span><strong>$10,000</strong></li>
+               <li><span>Saved</span><strong>$7,200</strong></li>
+             </div>
+           </article>
+
+           <article class="insight-panel">
+             <h3>Debt and repayment</h3>
+             <div class="progress-wrap">
+               <div class="progress-head">
+                 <span>Loan repayment</span>
+                 <strong>58%</strong>
+               </div>
+               <div class="progress-track"><div class="progress-bar" style="width:58%; background: linear-gradient(90deg, #22c55e 0%, #0f172a 100%);"></div></div>
+             </div>
+             <div class="tiny-list">
+               <li><span>Remaining</span><strong>$3,400</strong></li>
+               <li><span>Due in</span><strong>14 months</strong></li>
+             </div>
+           </article>
+         </div>
+       </div>
+     </section>
+
+     <section id="business-banking" class="section stacked-section">
+       <div class="container business-layout">
+         <div>
+           <span class="eyebrow">Business banking</span>
+           <h2>Financial tools that help your business move with confidence.</h2>
+           <p style="margin-top:18px; max-width:560px;">Whether you are managing day-to-day expenses or planning future growth, UW CREDIT UNION helps businesses stay informed with straightforward cash-flow visibility and practical financial support.</p>
+           <div class="experience-list" style="margin-top:24px;">
+             <div class="experience-item">
+               <div class="circle" aria-hidden="true">•</div>
+               <div>
+                 <h3>Business accounts</h3>
+                 <p>Keep company funds organized with a simple, secure account experience.</p>
+               </div>
+             </div>
+             <div class="experience-item">
+               <div class="circle" aria-hidden="true">•</div>
+               <div>
+                 <h3>Business payments</h3>
+                 <p>Move money efficiently and manage outgoing payments with clarity.</p>
+               </div>
+             </div>
+           </div>
+           <div style="margin-top:28px;">
+             <a href="/register" class="btn btn-primary">Explore Business Banking</a>
+           </div>
+         </div>
+
+         <div class="business-visual">
+           <div class="business-stat-box">
+             <div style="display:flex; justify-content:space-between; align-items:center;">
+               <span style="color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em;">Business account</span>
+               <span class="tag">Healthy</span>
+             </div>
+             <div class="business-figure">
+               <strong>$48,200</strong>
+               <span style="color: var(--success); font-weight: 700;">+9.6%</span>
+             </div>
+           </div>
+
+           <div class="demo-grid" style="margin-top:18px;">
+             <div class="demo-stat">
+               <span class="stat-label">Incoming</span>
+               <span class="stat-value">$16,800</span>
+             </div>
+             <div class="demo-stat">
+               <span class="stat-label">Outgoing</span>
+               <span class="stat-value">$8,990</span>
+             </div>
+           </div>
+
+           <div class="chart-box" style="margin-top:18px;">
+             <div class="progress-head">
+               <strong>Cash flow</strong>
+               <span style="color: var(--success); font-weight:700;">Positive</span>
+             </div>
+             <div class="line-chart" aria-hidden="true">
+               <span style="height: 20%;"></span>
+               <span style="height: 28%;"></span>
+               <span style="height: 32%;"></span>
+               <span style="height: 52%;"></span>
+               <span style="height: 61%;"></span>
+               <span style="height: 72%;"></span>
+               <span style="height: 96%;"></span>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section id="about" class="section">
+       <div class="container">
+         <div class="section-header">
+           <span class="eyebrow">Why choose us</span>
+           <h2>Simple financial tools for real life.</h2>
+         </div>
+
+         <div class="benefits-grid">
+           <article class="benefit-box">
+             <div class="benefit-icon" aria-hidden="true">◎</div>
+             <h3>Convenient digital access</h3>
+             <p>Bank online with clear account information, fast access, and tools designed for everyday tasks.</p>
+           </article>
+           <article class="benefit-box">
+             <div class="benefit-icon" aria-hidden="true">▣</div>
+             <h3>Clear financial information</h3>
+             <p>Review balances and activity in a format that keeps your finances easy to understand.</p>
+           </article>
+           <article class="benefit-box">
+             <div class="benefit-icon" aria-hidden="true">🔒</div>
+             <h3>Secure account management</h3>
+             <p>Use secure sign-in practices and account monitoring designed to support personal confidence.</p>
+           </article>
+           <article class="benefit-box">
+             <div class="benefit-icon" aria-hidden="true">☎</div>
+             <h3>Helpful customer support</h3>
+             <p>Get guidance when needed and find straightforward support channels for your banking questions.</p>
+           </article>
+           <article class="benefit-box">
+             <div class="benefit-icon" aria-hidden="true">◍</div>
+             <h3>Flexible banking products</h3>
+             <p>Choose financial tools that fit your goals, whether you are managing everyday spending or longer-term plans.</p>
+           </article>
+           <article class="benefit-box">
+             <div class="benefit-icon" aria-hidden="true">⎈</div>
+             <h3>Simple everyday banking</h3>
+             <p>Focus on what matters most with straightforward products and an easy-to-navigate experience.</p>
+           </article>
+         </div>
+       </div>
+     </section>
+
+     <section class="section" aria-labelledby="how-it-works">
+       <div class="container">
+         <div class="section-header">
+           <span class="eyebrow">How it works</span>
+           <h2 id="how-it-works">A simple path to better banking.</h2>
+         </div>
+
+         <div class="steps">
+           <article class="step">
+             <div class="step-number">1</div>
+             <h3>Open an account</h3>
+             <p>Choose a product that fits your banking needs and begin the account setup process.</p>
+           </article>
+           <article class="step">
+             <div class="step-number">2</div>
+             <h3>Verify your information</h3>
+             <p>Provide the details needed to complete your customer onboarding securely.</p>
+           </article>
+           <article class="step">
+             <div class="step-number">3</div>
+             <h3>Fund your account</h3>
+             <p>Move money into your account and begin managing your finances with confidence.</p>
+           </article>
+           <article class="step">
+             <div class="step-number">4</div>
+             <h3>Manage your finances</h3>
+             <p>Use secure digital tools to track activity, set goals, and maintain visibility over your money.</p>
+           </article>
+         </div>
+       </div>
+     </section>
+
+     <section id="resources" class="section stacked-section" aria-labelledby="financial-education">
+       <div class="container">
+         <div class="section-header">
+           <span class="eyebrow">Financial education</span>
+           <h2 id="financial-education">Useful resources for better money decisions.</h2>
+         </div>
+
+         <div class="resources-grid">
+           <article class="resource-card">
+             <div class="thumb" aria-hidden="true"></div>
+             <div class="content">
+               <span class="tagline">Savings</span>
+               <h3>How to build an emergency fund</h3>
+               <p>Learn practical steps for creating a financial cushion and managing unexpected expenses.</p>
+               <a href="#resources">Learn more →</a>
+             </div>
+           </article>
+
+           <article class="resource-card">
+             <div class="thumb" aria-hidden="true"></div>
+             <div class="content">
+               <span class="tagline">Planning</span>
+               <h3>Understanding savings accounts</h3>
+               <p>Compare how different savings options can help you plan for short- and long-term goals.</p>
+               <a href="#resources">Learn more →</a>
+             </div>
+           </article>
+
+           <article class="resource-card">
+             <div class="thumb" aria-hidden="true"></div>
+             <div class="content">
+               <span class="tagline">Budgeting</span>
+               <h3>Managing monthly expenses</h3>
+               <p>Build a clearer view of income, spending, and savings habits with a practical budgeting approach.</p>
+               <a href="#resources">Learn more →</a>
+             </div>
+           </article>
+         </div>
+       </div>
+     </section>
+
+     <section id="faq" class="section">
+       <div class="container faq-wrap">
+         <div>
+           <span class="eyebrow">Frequently asked questions</span>
+           <h2>Helpful information before you get started.</h2>
+         </div>
+
+         <div class="faq-list" aria-label="FAQ list">
+           <div class="faq-item open">
+             <button class="faq-question" type="button" aria-expanded="true">
+               <span>How do I open an account?</span>
+               <span aria-hidden="true">+</span>
+             </button>
+             <div class="faq-answer">
+               <p>Begin by choosing the account type that matches your needs, complete the application, and follow the verification steps provided by the onboarding process.</p>
+             </div>
+           </div>
+           <div class="faq-item">
+             <button class="faq-question" type="button" aria-expanded="false">
+               <span>What information is required?</span>
+               <span aria-hidden="true">+</span>
+             </button>
+             <div class="faq-answer">
+               <p>Customer onboarding typically requires identifying information and details necessary for account setup and secure verification.</p>
+             </div>
+           </div>
+           <div class="faq-item">
+             <button class="faq-question" type="button" aria-expanded="false">
+               <span>How does online banking work?</span>
+               <span aria-hidden="true">+</span>
+             </button>
+             <div class="faq-answer">
+               <p>Online banking gives you access to your account information, payment tools, and financial overview through a secure digital dashboard.</p>
+             </div>
+           </div>
+           <div class="faq-item">
+             <button class="faq-question" type="button" aria-expanded="false">
+               <span>How can I manage my account?</span>
+               <span aria-hidden="true">+</span>
+             </button>
+             <div class="faq-answer">
+               <p>You can review balances, track transaction history, update settings, and access financial tools through your secure account dashboard.</p>
+             </div>
+           </div>
+           <div class="faq-item">
+             <button class="faq-question" type="button" aria-expanded="false">
+               <span>How do transfers work?</span>
+               <span aria-hidden="true">+</span>
+             </button>
+             <div class="faq-answer">
+               <p>Transfers are initiated through the secure banking interface, where you enter the payment details and review the transaction before sending.</p>
+             </div>
+           </div>
+           <div class="faq-item">
+             <button class="faq-question" type="button" aria-expanded="false">
+               <span>How do I protect my account?</span>
+               <span aria-hidden="true">+</span>
+             </button>
+             <div class="faq-answer">
+               <p>Use secure credentials, keep login information private, and follow the security guidance available within your account and support resources.</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section class="section stacked-section" aria-labelledby="security-privacy">
+       <div class="container">
+         <div class="section-header">
+           <span class="eyebrow">Security & privacy</span>
+           <h2 id="security-privacy">Banking with a focus on security and confidence.</h2>
+         </div>
+
+         <div class="security-panel">
+           <article class="security-box">
+             <div class="security-icon" aria-hidden="true">✓</div>
+             <h3>Secure access</h3>
+             <p>Confidence starts with secure login practices and account monitoring designed to help protect your information.</p>
+           </article>
+           <article class="security-box">
+             <div class="security-icon" aria-hidden="true">◎</div>
+             <h3>Privacy-conscious handling</h3>
+             <p>We handle personal information responsibly and keep account details organized with privacy in mind.</p>
+           </article>
+           <article class="security-box">
+             <div class="security-icon" aria-hidden="true">🔔</div>
+             <h3>Security notifications</h3>
+             <p>Timely alerts and account updates help you stay aware of important activity and changes to your profile.</p>
+           </article>
+         </div>
+       </div>
+     </section>
+
+     <section id="contact" class="section">
+       <div class="container contact-panel">
+         <div class="contact-box">
+           <span class="eyebrow">Contact & support</span>
+           <h2>Need help with your account or a banking question?</h2>
+           <div class="contact-grid">
+             <div class="contact-item">
+               <h4>Customer support</h4>
+               <p>Reach out through the secure support experience available to account holders.</p>
+             </div>
+             <div class="contact-item">
+               <h4>Help center</h4>
+               <p>Review guidance on account access, digital banking, and everyday financial management.</p>
+             </div>
+             <div class="contact-item">
+               <h4>FAQs</h4>
+               <p>Find clear, practical answers to common questions about online banking and account setup.</p>
+             </div>
+             <div class="contact-item">
+               <h4>Resources</h4>
+               <p>Explore helpful financial education articles designed to support responsible financial habits.</p>
+             </div>
+           </div>
+         </div>
+
+         <div class="contact-box" aria-label="Immediate support information">
+           <span class="eyebrow">Support channels</span>
+           <h3>We’re here to help.</h3>
+           <p style="margin-top: 12px;">If you need help with an account question, transfer, or general financial guidance, contact the support team available through your secure banking portal.</p>
+           <div style="margin-top:20px; display:grid; gap:12px;">
+             <div style="padding:14px 16px; background:#fff; border:1px solid var(--border); border-radius:12px;">
+               <strong style="display:block; color:var(--primary); margin-bottom:4px;">Support desk</strong>
+               <span style="color: var(--muted);">Available to guide you through account access and digital banking questions.</span>
+             </div>
+             <div style="padding:14px 16px; background:#fff; border:1px solid var(--border); border-radius:12px;">
+               <strong style="display:block; color:var(--primary); margin-bottom:4px;">Financial education</strong>
+               <span style="color: var(--muted);">Explore helpful resources for budgeting, savings, and money management.</span>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section class="section" aria-label="Final call to action">
+       <div class="container">
+         <div class="cta-panel">
+           <div>
+             <span class="eyebrow" style="background: rgba(255,255,255,0.1); color:#fff;">Take control</span>
+             <h2>Take control of your everyday banking.</h2>
+             <p>Open an account or sign in to begin managing your finances with clarity and confidence.</p>
+           </div>
+           <div class="cta-actions">
+             <a href="register.php" class="btn btn-primary">Open an Account</a>
+             <a href="login.php" class="btn btn-secondary">Sign In</a>
+           </div>
+         </div>
+       </div>
+     </section>
+   </main>
+
+   <footer class="site-footer">
+     <div class="container">
+       <div class="footer-grid">
+         <div>
+           <div class="footer-brand">
+             <span class="brand-mark" aria-hidden="true">A</span>
+             <strong>UW CREDIT UNION</strong>
+           </div>
+           <p>Modern digital banking built around trust, straightforward financial tools, and clear account management.</p>
+         </div>
+
+         <div class="footer-col">
+           <h4>Personal</h4>
+           <a href="#products">Accounts</a>
+           <a href="#products">Savings</a>
+           <a href="#products">Loans</a>
+           <a href="#products">Cards</a>
+           <a href="#products">Transfers</a>
+         </div>
+
+         <div class="footer-col">
+           <h4>Business</h4>
+           <a href="#business-banking">Business Banking</a>
+           <a href="#business-banking">Business Accounts</a>
+           <a href="#business-banking">Payments</a>
+           <a href="#business-banking">Business Services</a>
+         </div>
+
+         <div class="footer-col">
+           <h4>Resources</h4>
+           <a href="#resources">Financial Education</a>
+           <a href="#faq">FAQs</a>
+           <a href="#security-privacy">Security</a>
+           <a href="#contact">Support</a>
+         </div>
+
+         <div class="footer-col">
+           <h4>Company</h4>
+           <a href="#about">About</a>
+           <a href="#contact">Contact</a>
+           <a href="#about">Careers</a>
+           <a href="#security-privacy">Privacy</a>
+           <a href="#contact">Terms</a>
+         </div>
+       </div>
+
+       <div class="footer-base">
+         <span>© 2025 UW CREDIT UNION. All rights reserved.</span>
+         <span>Designed for secure, dependable digital banking.</span>
+       </div>
+     </div>
+   </footer>
+
+   <script>
+     const toggle = document.querySelector('.mobile-menu-toggle');
+     const mobileNav = document.getElementById('mobile-nav');
+     if (toggle && mobileNav) {
+       toggle.addEventListener('click', () => {
+         const isOpen = mobileNav.classList.toggle('open');
+         toggle.setAttribute('aria-expanded', String(isOpen));
+       });
+     }
+
+     const faqItems = document.querySelectorAll('.faq-item');
+     faqItems.forEach((item) => {
+       const button = item.querySelector('.faq-question');
+       button.addEventListener('click', () => {
+         const isOpen = item.classList.contains('open');
+         faqItems.forEach((faq) => {
+           faq.classList.remove('open');
+           faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+         });
+         if (!isOpen) {
+           item.classList.add('open');
+           button.setAttribute('aria-expanded', 'true');
+         }
+       });
+     });
+   </script>
+</body>
+</html>
